@@ -55,7 +55,9 @@ module.exports = {
         new ExtractTextPluginCss('./css/[name].css'),
         new ExtractTextPluginSass('./css/[name].css'),
         new HtmlPlugin({
-            title: 'webpack-demo'
+            // title: 'webpack-demo'
+            template: path.join(__dirname, '../public/index.html'),//指定页面模板文件
+            filename: 'index.html'  //指定生成的页面名称
         }),
         new VueLoaderPlugin(),
     ],
